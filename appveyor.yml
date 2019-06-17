@@ -1,0 +1,7 @@
+image: Visual Studio 2017
+version: '{build}'
+build: off
+test: off
+build_script:
+  - cmd: msbuild /t:Rebuild /p:Configuration=Release /p:Platform=x86
+  - cmd: Release\PdbRpc23ErrorRepro.exe
